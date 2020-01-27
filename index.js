@@ -4,6 +4,8 @@ var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 let mongoose = require('mongoose');
 
+let {DATABASE_URL, PORT} = requir('./config')
+
 let { StudentList } = require('./model')
 
 var app = express();
@@ -291,6 +293,6 @@ function closeServer() {
 }
 
 
-runServer(8080, 'mongodb://localhost/university');
+runServer(PORT, DATABASE_URL);
 
 module.exports = {app, runServer, closeServer};
