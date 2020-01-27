@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 let mongoose = require('mongoose');
 
-let {DATABASE_URL, PORT} = requir('./config')
+let {DATABASE_URL, PORT} = require('./config')
 
 let { StudentList } = require('./model')
 
